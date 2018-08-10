@@ -13,13 +13,13 @@ class game_Othello(game):
     Change the Col and Row to get different variants of this game.
     Note size larger than 4*4 is very hard for personal computer to solve.
     '''
-    Col = 5
+    Col = 4
     Row = 4
     size = Row * Col
 
     def __init__(self):
         super(game_Othello, self).__init__()
-        self.name = "Othello54"
+        self.name = "Othello"+str(self.Col)+str(self.Row)
         self.rules = "To move: Place a chip with your color facing up on any empty square on the board such that there exists a straight " \
                      "\n(horizontal, vertical, and diagonal) line connecting that square to another square that is occupied by your piece " \
                      "\nwith all the squares in that line occupied by the opponent's pieces. There must be at least one opponent's piece " \

@@ -21,7 +21,6 @@ class cell:
         self.x, self.y = x, y
         self.state = 0
         self.sol = None
-        self.hint = True
         self.cv = cv
         self.tk = tk
         self.outer = cv.create_rectangle(x - self.size / 2, y - self.size / 2, x + self.size / 2, y + self.size / 2,
@@ -86,9 +85,9 @@ class cell:
             factor = 1
             if sol is not None and hint:
                 if sol.state == 'win':
-                    factor = 1 + 2 * (sol.remoteness / game_Othello.size)
+                    factor = 0.5 + 3 * (sol.remoteness / game_Othello.size)
                 elif sol.state == 'lose':
-                    factor = 2 - 0.5 * (sol.remoteness / game_Othello.size)
+                    factor = 5 - 4 * (sol.remoteness / game_Othello.size)
             self.cv.delete(self.hintPiece)
             self.hintPiece = self.cv.create_oval(self.x - self.hint_size * factor, self.y - self.hint_size * factor,
                                                  self.x + self.hint_size * factor, self.y + self.hint_size * factor,
@@ -331,7 +330,6 @@ class gui_player():
                                            font=("Courier", -25, 'bold'), justify=CENTER)
 
     def report(self, playerA, playerB):
-        print(playerA, playerB)
         n1 = self.pos.comp.count(1)
         n2 = self.pos.comp.count(2)
         text = ''

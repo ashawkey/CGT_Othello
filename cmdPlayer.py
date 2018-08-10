@@ -11,7 +11,6 @@ class player():
         self.game = game
         self.solver = solver(self.game)
         self.database = None
-        self.database = None
         self.player1 = None
         self.player2 = None
         self.name1 = None
@@ -177,7 +176,7 @@ class player():
         comboxlist = ttk.Combobox(master, textvariable=comvalue)
         comboxlist.grid(row=0, column=1, sticky=N + E + W)
         comboxlist["values"] = ("Computer", "Human")
-        comboxlist.current(0)
+        comboxlist.current(1)
 
         l2 = ttk.Label(master, text="Second Player: ").grid(row=1, column=0, sticky=W)
 
@@ -185,7 +184,7 @@ class player():
         comboxlist2 = ttk.Combobox(master, textvariable=comvalue2)
         comboxlist2.grid(row=1, column=1, sticky=N + E + W)
         comboxlist2["values"] = ("Computer", "Human")
-        comboxlist2.current(0)
+        comboxlist2.current(1)
 
         ttk.Label(master, text="Name 1: ").grid(row=2, column=0, sticky=W)
         name1_text = StringVar()
