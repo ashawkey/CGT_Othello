@@ -13,6 +13,7 @@ class game_Othello(game):
     Change the Col and Row to get different variants of this game.
     Note size larger than 4*4 is very hard for personal computer to solve.
     '''
+    #Col = 5
     Col = 4
     Row = 4
     size = Row * Col

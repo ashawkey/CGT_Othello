@@ -1,6 +1,8 @@
 ## Computational Game Theory: Player
 
-Author: hawkey, shion
+### By hawkey & shion
+
+![player](player.png)
 
 This is an implementation of a **strong loopy solver** for simple games, and also two players (general CMD version and specific GUI version for Othello).
 
